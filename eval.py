@@ -1,4 +1,4 @@
-@commands.command(name="eval")
+@bot.command(name="eval")
 @commands.is_owner()
 async def eval_fn(ctx, *, code):
     code.strip("` ")
