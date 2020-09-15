@@ -3,7 +3,7 @@
 async def eval_fn(ctx, *, code):
     code.strip("` ")
     code = "\n".join(f"    {i}" for i in code.splitlines()) #Adds an extra layer of indentation
-    code = f"async def eval_expr():\n{code}" #wraps the code inside an async function
+    code = f"async def eval_expr():\n{code}" #Wraps the code inside an async function
     def send(text): #Function for sending message to discord if code has any usage of print function
         bot.loop.create_task(ctx.send(text))
     env = {
